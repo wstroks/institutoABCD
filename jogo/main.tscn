@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://img/fundo.png" type="Texture" id=2]
+[ext_resource path="res://img/botoes/jogar.png" type="Texture" id=3]
+[ext_resource path="res://img/botoes/sobre.png" type="Texture" id=4]
+[ext_resource path="res://img/botoes/sair.png" type="Texture" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -2.10474
+margin_top = -48.0531
+margin_right = 1423.9
+margin_bottom = 810.947
+texture = ExtResource( 2 )
+
+[node name="jogar" type="TextureButton" parent="."]
+margin_left = 781.063
+margin_top = 384.952
+margin_right = 1179.06
+margin_bottom = 493.952
+texture_normal = ExtResource( 3 )
+
+[node name="sobre" type="TextureButton" parent="."]
+margin_left = 781.063
+margin_top = 513.27
+margin_right = 1179.06
+margin_bottom = 623.27
+texture_normal = ExtResource( 4 )
+
+[node name="sair" type="TextureButton" parent="."]
+margin_left = 781.063
+margin_top = 641.587
+margin_right = 1180.06
+margin_bottom = 750.587
+texture_normal = ExtResource( 5 )
+[connection signal="pressed" from="jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="sobre" to="." method="_on_sobre_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]
